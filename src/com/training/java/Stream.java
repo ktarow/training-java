@@ -10,6 +10,7 @@ public class Stream {
     public static void main(String[] args) {
         List<String> list = Arrays.asList("abc", "xyz", "defghi", "a");
 
+        // ストリーム生成→中間処理→終端処理
         list.stream()
                 .filter(s -> s.contains("a"))
                 .map(String::toUpperCase)
