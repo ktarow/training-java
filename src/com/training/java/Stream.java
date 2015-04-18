@@ -15,5 +15,11 @@ public class Stream {
                 .filter(s -> s.contains("a"))
                 .map(String::toUpperCase)
                 .forEach(System.out::println);
+
+        //内部的に並列処理
+        list.parallelStream()
+                .filter(s -> s.contains("a"))
+                .map(String::toUpperCase)
+                .forEach(System.out::println);
     }
 }
